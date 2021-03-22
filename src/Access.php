@@ -210,6 +210,24 @@ class Access
       return Request::Request("/access/password", $data, 'PUT');
   }
   /**
+    * Create new user token.
+    * POST /api2/json/access/users/{userid}/token/{tokenName}
+    * @param array    $data
+  */
+  public function createUserToken($userid, $tokenName, $data = array())
+  {
+      return Request::Request("/access/users/$userid/token/$tokenName", $data, 'POST');
+  }
+    /**
+    * Delete user token.
+    * POST /api2/json/access/users/{userid}/token/{tokenName}
+    * @param array    $data
+  */
+  public function deleteUserToken($userid, $tokenName, $data = array())
+  {
+      return Request::Request("/access/users/$userid/token/$tokenName", $data, 'DELETE');
+  }
+  /**
     * Get Access Control List (ACLs).
     * GET /api2/json/access/acl
   */
