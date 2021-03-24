@@ -76,8 +76,7 @@ class Request
     } else {
       $data = [
         'username'  => self::$username,
-        'password'  => self::$password,
-        'realm'     => self::$realm,
+        'password'  => self::$password
       ];
 
       $response = self::$Client->post("https://" . self::$hostname . ":" . self::$port . "/api2/json/access/ticket", $data);
