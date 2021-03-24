@@ -249,7 +249,7 @@ class Access
     * POST /api2/json/access/ticket
     * @param array    $data
   */
-  public static function createTicket($data = array())
+  public function createTicket($data = array())
   {
       return Request::Request("/access/ticket", $data, 'POST');
   }
